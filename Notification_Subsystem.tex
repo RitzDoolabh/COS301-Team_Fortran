@@ -15,9 +15,7 @@
 The notifications module provides notifications to system users regarding
 particular system updates that a user would like to be notified about through
 some medium external to the application.
-\begin{flushleft}
-For the class diagram we decided to use the observer design pattern which would be used to notify and update the Send Email and Send SMS classes, included in this is the strategy design pattern, such that Send Email and Send SMS inherit from Send Notification and this class is abstract. There are methods in the Send Email and Send SMS classes that allow users to be added to the user lists for the notifications to either or both of these mediums. There is also provision for more notification mediums to be added in the future and these can be attached to the Notify class. Should a notification medium be unavailable it can be detached from the Notify class until it is available. The Notify class can be called from any other module that would like to request a notification to be sent out to users.
-\end{flushleft}
+
 
 \subsubsection{UML Diagrams}	
 \begin{figure}[h!]
@@ -27,38 +25,59 @@ Notification Use Case Diagram
 
 \mbox{}\\
 \bigskip
+\clearpage
 
 
 \begin{figure}[h!]
   \includegraphics[width=1.3\textwidth]{Notifications_Class_Diagram.png}
 \end{figure}
 Notification Class Diagram
+\begin{flushleft}
+For the notifications subsystem the observer design pattern came to light, as this pattern allows objects to change state and all of its dependents follow suit. This allows a notification state to be used that can update whether or not a notification needs to be sent out. In this case the push method of observer was used. Also evident is the template design pattern that uses the concrete observers to redefine the way in which the notifications are sent. Notifying modules are also given the flexibility to decide which medium/s are used for the notification.
+\bigskip
+\newline
+There are methods in the Send Email and Send SMS classes that allow users to be added to the user lists for the notifications to either or both of these mediums. There is also provision for more notification mediums to be added in the future and these can be attached to the Notify class. Should a notification medium be unavailable it can be detached from the Notify class until it is available. The Notify class can be called from any other module that would like to request a notification to be sent out to users which allows for modularity.
+\bigskip
+\newline
+Notify: Subject
+\newline
+Send Notification: Observer(Observer) / Abstract Method(Template)
+\newline
+Send Email: Concrete Observer1(Observer) /Concrete Method(Template)
+\newline
+Send SMS: Concrete Observer2(Observer) / Concrete Method(Template)
+\end{flushleft}
+\mbox{}\\
+\bigskip
+\clearpage
+
+\begin{figure}[h!]
+  \includegraphics[width=\textwidth]{Notification_Sequence_Diagram.png}
+\end{figure}
+Notification Sequence Diagram
 
 \mbox{}\\
 \bigskip
 
 
 \begin{figure}[h!]
-  \includegraphics[width=\textwidth]{Notification_Sequence_Diagram.png}
+  \includegraphics[width=1.1\textwidth]{User_Register_Notification.png}
 \end{figure}
-Navigation Sequence Diagram
+Add User Activity Diagram
 
 \mbox{}\\
 \bigskip
 \clearpage
 
 \begin{figure}[h!]
-  \includegraphics[width=\textwidth]{Notification_Activity_Diagram.png}
+  \includegraphics[width=\textwidth]{Notifications_Activity_Diagram.png}
 \end{figure}
-Navigation Activity Diagram
-
-\mbox{}\\
-\bigskip
+Send Notification Activity Diagram
 
 \begin{figure}[h!]
-  \includegraphics[width=0.55\textwidth]{Notification_State_Diagram.png}
+  \includegraphics[width=0.6\textwidth]{Notification_State_Diagram.png}
 \end{figure}
-Navigation State Diagram
+Notification State Diagram
 
 \mbox{}\\
 \end{document}
