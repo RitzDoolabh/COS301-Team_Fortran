@@ -1,6 +1,14 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{geometry}
+
+ \geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ }
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -29,7 +37,7 @@ Notification Use Case Diagram
 
 
 \begin{figure}[h!]
-  \includegraphics[width=1.3\textwidth]{Notifications_Class_Diagram.png}
+  \includegraphics[width=\textwidth]{Notifications_Class_Diagram.png}
 \end{figure}
 Notification Class Diagram
 \begin{flushleft}
@@ -61,13 +69,12 @@ Notification Sequence Diagram
 
 
 \begin{figure}[h!]
-  \includegraphics[width=1.1\textwidth]{User_Register_Notification.png}
+  \includegraphics[width=\textwidth]{User_Register_Notification.png}
 \end{figure}
 Add User Activity Diagram
 
 \mbox{}\\
 \bigskip
-\clearpage
 
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{Notifications_Activity_Diagram.png}
