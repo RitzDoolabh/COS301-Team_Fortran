@@ -80,6 +80,17 @@
     The system will also have to handle sending bulk e-mails and SMS's from multiple notifying modules in a manner that will not cripple the system or put the system at risk.
     \end{flushleft}
     
+    \subsection{Design Constraints}
+    \begin{flushleft}
+    Notifications should not be long such that loading times are affected(e-mail) or that partitioning of messages occurs(sms)
+    \newline
+    Notifications should be pushed out within a given time frame.
+    \newline
+    Notifications should conform to the rules of the medium of transport.
+    \newline
+    No unnecessary data/information should be sent in these notifications. 
+    \end{flushleft}
+    
     
     \clearpage
     \subsubsection{UML Diagrams}
