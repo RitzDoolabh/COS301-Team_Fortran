@@ -1,0 +1,7 @@
+\begin{document}
+\section{Point Of Interest}
+\subsection{Overview Scope}
+Services to gather, maintain, persist and provide information related to the locations. Include both private and public information.
+CRUD locations: Drop a pin and name it. Show saved pins. Edit detail about pins. Delete pins. Locations specified for pins are acquired using services provided by the GIS module.
+
+The scope for the Location Module is presented below.
