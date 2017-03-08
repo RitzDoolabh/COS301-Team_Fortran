@@ -2,9 +2,9 @@ Repository For COS 301 Team Fortran
 
 Team Members:
 
-- u15226183 	AJ du Plooy
-- u15031625 	VR Iyer
-- u12077713 	MK Masimula	
-- u15107532 	T Ntsoane	
-- u14043778 	A Singh	
-- u15207812 	N Suklal
+- u15226183	Andries Jacobus du Plooy	
+- u15043844 Joseph Phutjane Letsoalo	
+- u15071830 Munyaradzi Mpofu		
+- u15075754	Ritesh Doolabh	
+- u17308632	Midhun John Cheriyan	
+- u12206522 Mathapelo Matabane	
