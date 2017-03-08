@@ -63,10 +63,10 @@
 	The subsystem will need to communicate with any other subsystem that wishes to create and send out notifications to the users.
 \newline
 
-	The subsystem will need to communicate with an automated E-Mail service to send out the mass e-mails to the users.
+	The subsystem will need to communicate with an automated E-Mail service to send out the mass e-mails to the users. Each notifying module will have access to its own instance of the notification subsystem to prevent any notifications from different notifying modules causing any conflict, and this also allows for no waiting period between creating and sending of notifications. They will be delivered in real time.
 \newline
 
-	The subsystem will need to communicate with an automated SMS service to send out the mass SMS's to the users.
+	The subsystem will need to communicate with an automated SMS service to send out the mass SMS's to the users. Each notifying module will have access to its own instance of the notification subsystem to prevent any notifications from different notifying modules causing any conflict, and this also allows for no waiting period between creating and sending of notifications. They will be delivered in real time.
 \newline
 
 	The users will need to have the appropriate communications interfaces available to allow them to receive notifications. This would include a working cellphone SIM card with a registered cellphone number and/or a working e-mail account that is accessible on a device with a data connection of some form.
@@ -91,9 +91,29 @@
     No unnecessary data/information should be sent in these notifications. 
     \end{flushleft}
     
+    \subsection{Software System Attributes}
+	\subsubsection{Reliability}    
+    \begin{flushleft}
+    The notifications subsystem is crucial in informing users of possible information. With this it is of utmost importance that all notifications sent are received by the registered users.
+    \end{flushleft}
+    
+    	\subsubsection{Availability}    
+    \begin{flushleft}
+The service must be available to all users and administrators of notifying modules at all times.
+    \end{flushleft}
+    
+    	\subsubsection{Security}    
+    \begin{flushleft}
+    Notifications and communications must be secure such that no malicious activity occurs on the system and users are not conveyed wrong information.
+    \end{flushleft}
+    
+    	\subsubsection{Maintainability}    
+    \begin{flushleft}
+    The amount of notification mediums is increasing and to accommodate this new forms of communication mediums must be easily appended to the system.
+    \end{flushleft}
     
     \clearpage
-    \subsubsection{UML Diagrams}
+    \subsection{UML Diagrams}
     
     \begin{figure}[h!]
         \includegraphics[width=\textwidth]{Notifications_Use_Case.png}
