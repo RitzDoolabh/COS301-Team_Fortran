@@ -1,6 +1,15 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{geometry}
+
+ \geometry{
+ a4paper,
+ left=30mm,
+ right=30mm,
+ top=30mm,
+ }
+
 \graphicspath{ {images/} }
 
 %----------------------------------------------------------------------------------------
@@ -221,7 +230,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     some medium external to the application.
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Notifications/img/Notifications_Use_Case.png}\caption{Notification Use Case Diagram}
+        \includegraphics[width=\textwidth]{Notifications/Img/Notifications_Use_Case.png}\caption{Notification Use Case Diagram}
     \end{figure}
  
 \clearpage
@@ -229,7 +238,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
 \subsubsection{Design details}
    
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{Notifications/img/Notifications_Class_Diagram.png}\caption{Notification Class Diagram}
+      \includegraphics[width=\textwidth]{Notifications/Img/Notifications_Class_Diagram.png}\caption{Notification Class Diagram}
     \end{figure}
     
     
@@ -286,7 +295,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
     \mbox{}\\
     \bigskip
-   
+    \clearpage
     
     \begin{figure}[h!]
         \begin{center}
@@ -295,7 +304,99 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     \end{figure}
     
     \mbox{}\\
+    \bigskip
+    \newpage
     
+\subsection{Events}
+\subsubsection{Scope}
+    The events module serves as the system to log, update and view events that might be hosted on the University. These events include Educational and Social events, but can be branched out to other categories as they arise.
+    
+    \begin{figure}[h!]
+        \includegraphics[width=0.8\textwidth]{Events/Images/EventUC.jpg}
+        \caption{Events Use Case Diagram}
+    \end{figure}
+ 
+\clearpage
+
+\subsubsection{Design details}
+   
+    \begin{figure}[h!]
+      \includegraphics[width=\textwidth]{Events/Images/ClassDiagramEvents.png}
+      \caption{Events Class Diagram}
+    \end{figure}
+    
+    
+    \begin{flushleft}
+    
+        For the events subsystem the Factory Method design pattern is applicable, as this pattern allows objects of the same abstract type to be initiated by letting a certain Creator or object user decide which type of concrete class to instantiate.
+        
+        \bigskip
+        
+        In this instance, a certain type of building is allowed to host an event of a certain type. This allows for greater accuracy in searching for a certain event in a certain building. It also enables the events to be easily sorted and ordered to make presentation to the user easier. The fact that buildings as well as events can be created or altered dynamically also is catered for by the Factory Method, since a concrete building can easily be created and linked to the relevant concrete event, which can also be created and destroyed with ease. This is done while still maintaining the relevant needed information and functionality that each building and event needs (which is hosted in the abstract class).
+        
+        \bigskip
+        
+        There are methods in the Buildings class that allow users to add buildings as they are needed. The Buildings class also allows users to edit, view or add Events. This is done in the Building class as it is implemented with the Creator role of the design pattern. The viewEvents() function will act as a searcher function that will traverse the list of events that the relevant building is hosting in order to enable a user to invoke other functionalities, like  viewing an event or editing an event. The Buildings class can be called from any other module that would like to have access a to Events, like if the User class wants to add an event.
+        
+        \bigskip
+        Design Pattern Entities:
+        \bigskip
+        
+        Buildings: Creator
+        \newline
+        Auditorium: Concrete Creator
+        \newline
+        Classroom: Concrete Creator
+        \newline
+        Labs: Concrete Creator
+        \newline
+        Events: Product
+        \newline
+        Educational: Concrete Product
+        \newline
+        Social: Concrete Product
+    
+    \end{flushleft}
+    
+    \mbox{}\\
+    \bigskip
+  
+    
+    \begin{figure}[h!]
+        \includegraphics[width=\textwidth]{Events/Images/EventsSequence.jpg} \caption{Events Sequence Diagram}
+    \end{figure}
+  
+    
+    \mbox{}\\
+    \bigskip
+    
+    
+    \begin{figure}[h!]
+        \includegraphics[width=\textwidth]{Events/Images/ActivityDiagramUser.jpg} \caption{Normal User Activity Diagram}
+    \end{figure}
+    
+    
+    \mbox{}\\
+    \bigskip
+    
+    \begin{figure}[h!]
+        \includegraphics[width=\textwidth]{Events/Images/ActivityDiagramAdmin.jpg} \caption{Advanced User Activity Diagram}
+    \end{figure}
+    
+    
+    \mbox{}\\
+    \bigskip
+   
+    
+    \begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{Events/Images/StateDiagramEvent.jpg} \caption{Events State Diagram}
+        \end{center}
+    \end{figure}
+    
+    \mbox{}\\
+    \bigskip
+    \clearpage
     \newpage
     
 \subsection{Points Of Interest}
@@ -303,11 +404,6 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
 
 \subsubsection{Design details}
 
-\subsection{Events}
-\subsubsection{Scope}
-
-\subsubsection{Design details}
-\newpage
 \section{Other Non-functional Requirements}
 \subsection{Performance Requirements}
 The notifications will have to be pushed out in a timely manner such that the time between creation and time of sending of notifications is minimal.
