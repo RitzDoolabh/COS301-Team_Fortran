@@ -22,13 +22,11 @@
 
     \section{Subsystems}
     
-    \subsection{Notification Subsystem}
+    \subsection{Events Subsystem}
     
     \subsubsection{Overview}
     
-    The notifications module provides notifications to system users regarding
-    particular system updates that a user would like to be notified about through
-    some medium external to the application.
+    The events module serves as the system to log, update and view events that might be hosted on the University. These events include Educational and Social events, but can be branched out to other categories as they arise.
     
     \subsubsection{UML Diagrams}
     
@@ -44,15 +42,19 @@
     \begin{figure}[h!]
       \includegraphics[width=\textwidth]{Images/ClassDiagramEvents.png}
     \end{figure}
-    Notification Class Diagram
+    Events Class Diagram
     
     \begin{flushleft}
     
-        For the notifications subsystem the observer design pattern came to light, as this pattern allows objects to change state and all of its dependents follow suit. This allows a notification state to be used that can update whether or not a notification needs to be sent out. In this case the push method of observer was used. Also evident is the template design pattern that uses the concrete observers to redefine the way in which the notifications are sent. Notifying modules are also given the flexibility to decide which medium/s are used for the notification.
+        For the events subsystem the Factory Method design pattern is applicable, as this pattern allows objects of the same abstract type to be initiated by letting a certain framework or object user decide which type of concrete class to instantiate.
         
         \bigskip
         
-        There are methods in the Send Email and Send SMS classes that allow users to be added to the user lists for the notifications to either or both of these mediums. There is also provision for more notification mediums to be added in the future and these can be attached to the Notify class. Should a notification medium be unavailable it can be detached from the Notify class until it is available. The Notify class can be called from any other module that would like to request a notification to be sent out to users which allows for modularity.
+        In this instance, a certain type of building is allowed to host an event of a certain type. This allows for greater accuracy in searching for a certain event in a certain building. It also enables the events to be easily sorted and ordered to make presentation to the user easier. The fact that buildings as well as events can be created or altered dynamically also is catered for by the Factory Method, since a concrete building can easily be created and linked to the relevant concrete event, which can also be created and destroyed with ease. This is done while still maintaining the relevant needed information and functionality that each building and event needs (which is hosted in the abstract class).
+        
+        \bigskip
+        
+        There are methods in the Buildings class that allow users to add buildings as they are needed. The Buildings class also allows users to edit, view or add Events. This is done in the Building class as it is implemented with the Framework role of the design pattern. The viewEvents() function will act as a searcher function that will traverse the list of events that the relevant building is hosting in order to enable a user to invoke other functionalities, like  viewing an event or editing an event. The Buildings class can be called from any other module that would like to have access a to Events, like if the User class wants to add an event.
         
         \bigskip
         Notify: Subject
@@ -72,7 +74,7 @@
     \begin{figure}[h!]
         \includegraphics[width=\textwidth]{Images/EventsSequence.jpg}
     \end{figure}
-    Notification Sequence Diagram
+    Events Sequence Diagram
     
     \mbox{}\\
     \bigskip
@@ -81,7 +83,7 @@
     \begin{figure}[h!]
         \includegraphics[width=\textwidth]{Images/ActivityDiagramUser.jpg}
     \end{figure}
-    Add User Activity Diagram
+    Normal User Activity Diagram
     
     \mbox{}\\
     \bigskip
@@ -90,7 +92,7 @@
     \begin{figure}[h!]
         \includegraphics[width=\textwidth]{Images/ActivityDiagramAdmin.jpg}
     \end{figure}
-    Send Notification Activity Diagram
+    Advanced User Activity Diagram
     
     \mbox{}\\
     \bigskip
@@ -101,7 +103,7 @@
             \includegraphics[width=0.6\textwidth]{Images/StateDiagramEvent.jpg}
         \end{center}
     \end{figure}
-    Notification State Diagram
+    Events State Diagram
     
     \mbox{}\\
 \end{document}
