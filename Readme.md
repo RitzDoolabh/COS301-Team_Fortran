@@ -1,4 +1,4 @@
-Repository For COS 301 Team Fortran
+Repository For COS 301 Team Fortran, Phase two
 
 Team Members:
 
