@@ -46,7 +46,7 @@
     
     \begin{flushleft}
     
-        For the events subsystem the Factory Method design pattern is applicable, as this pattern allows objects of the same abstract type to be initiated by letting a certain framework or object user decide which type of concrete class to instantiate.
+        For the events subsystem the Factory Method design pattern is applicable, as this pattern allows objects of the same abstract type to be initiated by letting a certain Creator or object user decide which type of concrete class to instantiate.
         
         \bigskip
         
@@ -54,17 +54,26 @@
         
         \bigskip
         
-        There are methods in the Buildings class that allow users to add buildings as they are needed. The Buildings class also allows users to edit, view or add Events. This is done in the Building class as it is implemented with the Framework role of the design pattern. The viewEvents() function will act as a searcher function that will traverse the list of events that the relevant building is hosting in order to enable a user to invoke other functionalities, like  viewing an event or editing an event. The Buildings class can be called from any other module that would like to have access a to Events, like if the User class wants to add an event.
+        There are methods in the Buildings class that allow users to add buildings as they are needed. The Buildings class also allows users to edit, view or add Events. This is done in the Building class as it is implemented with the Creator role of the design pattern. The viewEvents() function will act as a searcher function that will traverse the list of events that the relevant building is hosting in order to enable a user to invoke other functionalities, like  viewing an event or editing an event. The Buildings class can be called from any other module that would like to have access a to Events, like if the User class wants to add an event.
         
         \bigskip
-        Notify: Subject
+        Design Pattern Entities:
+        \bigskip
         
-        Send Notification: Observer(Observer) / Abstract Method(Template)
+        Buildings: Creator
+        \newline
+        Auditorium: Concrete Creator
+        \newline
+        Classroom: Concrete Creator
+        \newline
+        Labs: Concrete Creator
+        \newline
+        Events: Product
+        \newline
+        Educational: Concrete Product
+        \newline
+        Social: Concrete Product
         
-        Send Email: Concrete Observer1(Observer) /Concrete Method(Template)
-        
-        Send SMS: Concrete Observer2(Observer) / Concrete Method(Template)
-    
     \end{flushleft}
     
     \mbox{}\\
