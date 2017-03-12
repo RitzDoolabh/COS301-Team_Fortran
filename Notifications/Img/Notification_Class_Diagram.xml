@@ -2,19 +2,19 @@
 [waiting for message]Long="36548"
 [waiting for message]-tes</help_text><element><id>UMLClass</id><coordinates><x>680</x><y>570</y><w>250</w><h>90</h></coordinates><panel_attributes>Send_Email
 --
+
 +send_Email()
 +update(emailState, emailTitle, emailBody)
---
-+addUser( :User) : bool
-+removeUser(:User) : bool
+
+
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>570</y><w>230</w><h>90</h></coordinates><panel_attributes>Send_SMS
 --
+
 +send_SMS()
 +update(smsState, smsTitle, smsBody
---
-+addUser( :User) : bool
-+removeUser(:User) : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>280</y><w>300</w><h>170</h></coordinates><panel_attributes>Send_Notification
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>280</y><w>300</w><h>170</h></coordinates><panel_attributes>Send_Notification
 --
 -observerList: vector&lt;Send_Notification&gt;
 -smsState: bool
@@ -28,14 +28,11 @@
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>260</y><w>420</w><h>200</h></coordinates><panel_attributes>Notify
 --
 -observerList: vector&lt;Send_Notification&gt;
--smsState: bool
--emailState: bool
--nTitle: String
--nBody: String
+
 --
-+Notify()
-+attach(:Observer) : bool
-+detach(:Observer) : bool
-+notify()
+
 +setStates(smsState : bool , emailState ; bool , nTitle: String , nBody: String)
-+getStates() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>440</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;70;10;70;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>440</y><w>150</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;130;70;130;130</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>330</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>140</y><w>100</w><h>30</h></coordinates><panel_attributes>Notifying Module</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>160</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>
++getStates() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>440</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;70;10;70;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>440</y><w>150</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;130;70;130;130</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>330</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>140</y><w>100</w><h>30</h></coordinates><panel_attributes>Notifying Module</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>160</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>510</x><y>220</y><w>120</w><h>30</h></coordinates><panel_attributes>Subject</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>730</x><y>670</y><w>130</w><h>40</h></coordinates><panel_attributes>Concrete Observer
+Concrete Method</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1040</x><y>670</y><w>130</w><h>40</h></coordinates><panel_attributes>Concrete Observer
+Concrete Method</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>960</x><y>220</y><w>130</w><h>40</h></coordinates><panel_attributes>Observer
+Abstract Method</panel_attributes><additional_attributes></additional_attributes></element></diagram>
