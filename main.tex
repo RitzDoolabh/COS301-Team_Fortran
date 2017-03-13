@@ -27,7 +27,7 @@
 \newcommand*{\titleGP}{\begingroup
 		\begin{figure}[t]
 			\centering
-			\includegraphics[width=350px]{UP_Logo.PNG}
+			\includegraphics[width=350px]{fortran-design-srs/images/UP_Logo.PNG}
 		\end{figure}
 \centering 
 \vspace*{\baselineskip}
@@ -99,7 +99,7 @@ The core of the system is a navigation tool which is enriched with functionality
 receiving information of interest.
 
 \section{References}
-Goldman, J.L., Abraham, G. and Song, I. (1998) Generating Software Requirements Specification (IEEE Std. 830 1998) document with Use Cases. Available at: http://www.pages.drexel.edu/~sga72/docs/SRSwithUseCases.pdf (Accessed: 24 February 2017).\\
+Goldman, J.L., Abraham, G. and Song, I. (1998) Generating Software Requirements Specification (IEEE Std. 830 1998) document with Use Cases. \\ Available at: http://www.pages.drexel.edu/~sga72/docs/SRSwithUseCases.pdf \\(Accessed: 24 February 2017).\\
 \noindent Singh, E., Pieterse, V., Omeleze, S., Theunissen, M. (2017) 2017 Class Project NavUP. Available at: http://www.cs.up.ac.za/courses/COS301/NavUPRequirementsSpecification.pdf (Accessed: 27 February 2017).\\ 
 \newpage
 
@@ -109,7 +109,7 @@ Goldman, J.L., Abraham, G. and Song, I. (1998) Generating Software Requirements 
 
 The Notifications subsystem will allow for notifications to be pushed to registered users in the form of E-mails. The E-mails will have a descriptive subject associated with it and will be accessible from any device that allows a form of e-mail service.
 The subsystem will allow for notifications to be pushed to registered users in the form of SMS's. the SMS's will only have a senders name which will indicate the type of notification and the SMS's content will then go on to expand on the notifications description.
-The subsystem will interact with users mostly on a cellular device and a colour screen will be required to get the most out of the application in terms of the E-mail service, SMS's on the other hand are a vital part of most cellular devices and in most cases no extra functionality is required.
+The subsystem will interact with users mostly on a cellular device and a color screen will be required to get the most out of the application in terms of the E-mail service, SMS's on the other hand are a vital part of most cellular devices and in most cases no extra functionality is required.
 
 The system must be able to help the user locate buildings by the use of display, navigate and select functions over the system's built GUI.
 The system shall provide help options to the user when locating a certain POI.
@@ -124,8 +124,8 @@ The subsystem will need to have access to a database of users such that they can
 
 A programmatic interface for operations such as adding locations, modifying locations, deleting locations is required.
 
-\clearpage
-The user subsystem will need to have access to the user data inside the database. This will be for the purpose of storing the information of newly registered users, and retrieving user credentials for login purposes, etc. The user subsystem will interact with the notifications subsystem. The application will provide the functionality for users to receive various notifications through the notifications module, therefore there should be an appropriate form of communication between these two modules to facilitate this interaction. Interaction will occur between the user subsystem and the events subsystem. The application will allow a user to view events and maintain an events schedule, therefore the user module should have access to all informations related to events. Interaction will occur between the user and the point of interest module. Each user on the system will have the option to add a list of locations to their favourites list. This will require for the user module to have access to all of the location information on the system.
+
+The user subsystem will need to have access to the user data inside the database. This will be for the purpose of storing the information of newly registered users, and retrieving user credentials for login purposes, etc. The user subsystem will interact with the notifications subsystem. The application will provide the functionality for users to receive various notifications through the notifications module, therefore there should be an appropriate form of communication between these two modules to facilitate this interaction. Interaction will occur between the user subsystem and the events subsystem. The application will allow a user to view events and maintain an events schedule, therefore the user module should have access to all informations related to events. Interaction will occur between the user and the point of interest module. Each user on the system will have the option to add a list of locations to their favorites list. This will require for the user module to have access to all of the location information on the system.
 
 \subsection{Hardware Interface}
 
@@ -145,10 +145,6 @@ The Notifications subsystem will need to communicate with any other subsystem th
 The subsystem will need to communicate with an automated E-Mail service to send out the mass e-mails to the users. Each notifying module will have access to its own instance of the notification subsystem to prevent any notifications from different notifying modules causing any conflict, and this also allows for no waiting period between creating and sending of notifications. They will be delivered in real time.
 The subsystem will need to communicate with an automated SMS service to send out the mass SMS's to the users. Each notifying module will have access to its own instance of the notification subsystem to prevent any notifications from different notifying modules causing any conflict, and this also allows for no waiting period between creating and sending of notifications. They will be delivered in real time.
 The users will need to have the appropriate communications interfaces available to allow them to receive notifications. This would include a working cellphone SIM card with a registered cellphone number and/or a working e-mail account that is accessible on a device with a data connection of some form.
-
-\subsection{System Interface}
-
-\subsection{Memory}
 
 \newpage
 \section{System Features - Modules}
@@ -172,7 +168,7 @@ Only Admin users may change the value of the isAdmin field of other users.
 There are three types of users: Admin, User and Guest.
 
 	\begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/User_Subsystem_Use_Case_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/User_Subsystem_Use_Case_Diagram.png}
       \caption{User Use Case Diagram Diagram}
     \end{figure}
 
@@ -181,7 +177,7 @@ There are three types of users: Admin, User and Guest.
 \subsubsection{Design details}
 
 	\begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/User_Subsystem_Class_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/User_Subsystem_Class_Diagram.png}
       \caption{User Class Diagram}
     \end{figure}
     
@@ -204,39 +200,39 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
 \end{flushleft}
 
 	\begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/User_State_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/User_State_Diagram.png}
       \caption{User State Diagram}
     \end{figure}
 
 	\begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Register_User_Sequence_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Register_User_Sequence_Diagram.png}
       \caption{Register User Sequence Diagram}
     \end{figure}
     
     \clearpage
     
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Register_User_Activity_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Register_User_Activity_Diagram.png}
       \caption{Register User Activity Diagram}
     \end{figure}
     
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Grant_Admin_Rights_Sequence_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Grant_Admin_Rights_Sequence_Diagram.png}
       \caption{Grant Admin Rights Sequence Diagram}
     \end{figure}
     
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Grant_Admin_Rights_Activity_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Grant_Admin_Rights_Activity_Diagram.png}
       \caption{Grant Admin Rights Activity Diagram}
     \end{figure}
     
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Remove_Admin_Rights_Sequence_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Remove_Admin_Rights_Sequence_Diagram.png}
       \caption{Remove Admin Rights Sequence Diagram}
     \end{figure}
     
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{User/img/Remove_Admin_Rights_Activity_Diagram.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Remove_Admin_Rights_Activity_Diagram.png}
       \caption{Remove Admin Rights Activity Diagram}
     \end{figure}
     
@@ -249,7 +245,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     some medium external to the application.
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Notifications/Img/Notifications_Use_Case.png}\caption{Notification Use Case Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/Notifications_Use_Case.png}\caption{Notification Use Case Diagram}
     \end{figure}
  
 \clearpage
@@ -257,7 +253,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
 \subsubsection{Design details}
    
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{Notifications/Img/Notifications_Class_Diagram.png}\caption{Notification Class Diagram}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/Notifications_Class_Diagram.png}\caption{Notification Class Diagram}
     \end{figure}
     
     
@@ -291,7 +287,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
   
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Notifications/Img/Notification_Sequence_Diagram.png} \caption{Notification Sequence Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/Notification_Sequence_Diagram.png} \caption{Notification Sequence Diagram}
     \end{figure}
   
     
@@ -300,7 +296,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Notifications/Img/User_Register_Notification.png} \caption{Add User Activity Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/User_Register_Notification.png} \caption{Add User Activity Diagram}
     \end{figure}
     
     
@@ -308,7 +304,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     \bigskip
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Notifications/Img/Notifications_Activity_Diagram.png} \caption{Send Notification Activity Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/Notifications_Activity_Diagram.png} \caption{Send Notification Activity Diagram}
     \end{figure}
     
     
@@ -318,7 +314,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
     \begin{figure}[h!]
         \begin{center}
-            \includegraphics[width=0.6\textwidth]{Notifications/Img/Notification_State_Diagram.png} \caption{Notification State Diagram}
+            \includegraphics[width=0.6\textwidth]{fortran-design-srs/images/Notification_State_Diagram.png} \caption{Notification State Diagram}
         \end{center}
     \end{figure}
     
@@ -331,7 +327,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     The events module serves as the system to log, update and view events that might be hosted on the University. These events include Educational and Social events, but can be branched out to other categories as they arise.
     
     \begin{figure}[h!]
-        \includegraphics[width=0.8\textwidth]{Events/Images/EventUC.jpg}
+        \includegraphics[width=0.8\textwidth]{fortran-design-srs/images/EventUC.jpg}
         \caption{Events Use Case Diagram}
     \end{figure}
  
@@ -340,7 +336,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
 \subsubsection{Design details}
    
     \begin{figure}[h!]
-      \includegraphics[width=\textwidth]{Events/Images/ClassDiagramEvents.png}
+      \includegraphics[width=\textwidth]{fortran-design-srs/images/ClassDiagramEvents.png}
       \caption{Events Class Diagram}
     \end{figure}
     
@@ -382,7 +378,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
   
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Events/Images/EventsSequence.jpg} \caption{Events Sequence Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/EventsSequence.jpg} \caption{Events Sequence Diagram}
     \end{figure}
   
     
@@ -391,7 +387,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Events/Images/ActivityDiagramUser.jpg} \caption{Normal User Activity Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/ActivityDiagramUser.jpg} \caption{Normal User Activity Diagram}
     \end{figure}
     
     
@@ -399,7 +395,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     \bigskip
     
     \begin{figure}[h!]
-        \includegraphics[width=\textwidth]{Events/Images/ActivityDiagramAdmin.jpg} \caption{Advanced User Activity Diagram}
+        \includegraphics[width=\textwidth]{fortran-design-srs/images/ActivityDiagramAdmin.jpg} \caption{Advanced User Activity Diagram}
     \end{figure}
     
     
@@ -409,7 +405,7 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
     \begin{figure}[h!]
         \begin{center}
-            \includegraphics[width=0.6\textwidth]{Events/Images/StateDiagramEvent.jpg} \caption{Events State Diagram}
+            \includegraphics[width=0.6\textwidth]{fortran-design-srs/images/StateDiagramEvent.jpg} \caption{Events State Diagram}
         \end{center}
     \end{figure}
     
@@ -420,8 +416,73 @@ GuestUser / GeneralUser / AdminUser : Concrete Product
     
 \subsection{Points Of Interest}
 \subsubsection{Scope}
+This subsystem services to gather, maintain, persist and provide information related to the locations, this includes both private and public information. The Admin is allowed to create, and update and delete locations in the system whereas all other users are only allowed to view(read) the locations.
+A pin is dropped to signify location, and named as that specific location is saved for future reference. The system displays saved pins as well as allows for details about pins to be edited by admin. Admin can also delete pins from saved locations. Furthermore, locations specified for pins are acquired using services provided by the GIS module.
 
+\mbox{}\\
+    \bigskip
+    
+\begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{fortran-design-srs/images/POI_Use_Case_Diagram.jpg} \caption{Points of Interest Use Case Diagram}
+        \end{center}
+    \end{figure}
+    
+\newpage
 \subsubsection{Design details}
+
+\begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{fortran-design-srs/images/class_diagram.png} \caption{Points Of Interest Class Diagram}
+        \end{center}
+    \end{figure}
+
+The appropriate design pattern applicable for the Points Of Interest Subsystem is the Facade design pattern. This Structural design pattern encapsulates the complex database containing information about the various buildings and points of interests within this subsystem. The user need not require the knowledge of the locations management system but only access each location.
+\newline 
+\noindent In this case, the Points of Interest class acts as a Facade to the regular user, providing them with an interface to view, select and save a desired locations, or Points of Interest, however, not allowing the user access to create, update or delete any locations as that is only authorized by the Admin user.
+\newline \newline
+\noindent Design Pattern Entities:
+\begin{itemize}
+\item Client - Regular User
+\item Facade - Points of Interest
+\item Additional Facade - Location Manager
+\end{itemize}
+
+\mbox{}\\
+    \bigskip
+\begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{fortran-design-srs/images/sequantial_Diagram.png} \caption{Points of Interest Sequential Diagram}
+        \end{center}
+    \end{figure}
+
+\mbox{}\\
+    \bigskip
+    
+    \begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{fortran-design-srs/images/POI_State_Diagram.jpg} \caption{Points Of Interest State Diagram}
+        \end{center}
+    \end{figure}
+    \mbox{}\\
+    \bigskip
+    \clearpage
+\newpage
+\section{System Design}
+An overarching view of the whole NavUP system is shown in the deployment diagram below. This describes the relation between subsystems(core and add-ons) as well as the additional subsystems identified for the system. All components describe their relational functions to operate the system, NavUP.
+\mbox{}\\
+    \bigskip
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1.2\textwidth]{fortran-design-srs/images/DeploymentDiagram.png} \caption{Deployment Diagram of NavUP system}
+		\end{center}
+\end{figure}
+\mbox{}\\
+    \bigskip
+    
+    
+    \clearpage
+\newpage
 
 \section{Other Non-functional Requirements}
 \subsection{Performance Requirements}
@@ -431,7 +492,7 @@ The system will also have to handle sending bulk e-mails and SMS's from multiple
 \newline
 The system must accommodate any number of users at any given time period. All page requests must be processed by the system in no more than the average response time of the Internet connection. 
 \newline
-The system must display confirmation of user log ins, as well as display favourite Points of Interest relative to the user profile.
+The system must display confirmation of user log ins, as well as display favorite Points of Interest relative to the user profile.
 \newline
 The user interface should have fast response times. The application should take too long to load another interface upon the user's request.
 \subsection{Design Constraints}
@@ -482,6 +543,5 @@ Below is a summary of the technology choices for the NavUp system and a brief mo
 \item PHP - Hypertext Preprocessor is a scripting language that will be used alongside(embedded in) HTML5 to allow server side scripting. This allows the code part of the system to be more secure and allow information to be sent to and from the server in a secure way.
 \item Google Maps - Google Maps will be used to aid the navigation process within the application so that coordinates can be sent to the server for processing on the UP Campus Map. 
 \end{itemize}
-\newpage
-\section{Appendix A - Glossary of Terms and Definitions}
+
 \end{document}
