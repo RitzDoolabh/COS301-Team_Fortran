@@ -4,7 +4,7 @@ Workflow conventions:
 
 1. A branch for each subsystem: Notifications, Points of Interest, Events and Users.
 
-2. Projects tab has all open issues for each susbsytem, move to the REVIEW column for a fellow team member to review work, and y feedback must be given and on completeion move the issue to the DONE column.
+2. Projects tab has all open issues for each susbsytem, move to the REVIEW column for a fellow team member to review your work. Feedback must be given and/or on completeion the issue must be moved to the DONE column.
 
 3. Merge all subsystem branches into master.
 
